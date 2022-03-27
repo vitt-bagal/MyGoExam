@@ -11,7 +11,7 @@ func main() {
 	c := make(chan error)
 	s1 := "abc"
 	var p = &s1
-	go runner(p, c)
+	go runner(p, c) // do not create error
 	go runner(nil, c)
 	fmt.Println(<-c)
 	fmt.Println(<-c)
